@@ -1,0 +1,43 @@
+@use "variables" as v;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: v.$mainFont;
+  background: v.$Violet;
+  background-image: url(../images/bg-desktop.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 767px) {
+    height: 100%;
+    // width: 100%;
+    background-image: url(../images/bg-mobile.svg);
+  }
+}
+
+img,
+picture {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: v.$headingFont;
+}
+
+.container {
+  margin-inline: auto;
+  padding-inline: 16px;
+}
